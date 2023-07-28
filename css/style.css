@@ -1,0 +1,359 @@
+
+@font-face {
+    font-family: insertCoin;
+    src: url(../font/insertcoin.otf)
+}
+html {
+    overflow: hidden;
+}
+* {
+    margin: 0;
+    padding: 0
+}
+
+@keyframes zoom-in-zoom-out {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.1, 1.1);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes mongo_title{
+    0% {
+        transform: scale(30, 30);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(15, 15);
+        opacity: 0;
+        
+    }
+
+    100% {
+        transform: scale(1, 1);
+        opacity: 1;
+        
+    }
+}
+
+.container{
+    display: flex;
+    font-family: insertCoin;
+    justify-content: flex-start;
+    background-image: url(../img/background_container.jpeg);
+    border-radius: 20px;
+    
+    background-size: cover;
+    margin: 0 auto;
+        width: 1200px;
+        border: 1px solid;
+        height: 800px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+#game-screen {
+    position: relative;
+    overflow: hidden;
+    background-image: url(../img/background.png);
+    background-size: cover;
+    display: none;
+    margin-left: 50px;
+}
+
+.startScreen{
+    position: absolute;
+    overflow: hidden;
+    background-color: black;
+    background-size: cover;
+    height: 450px;
+    border-radius: 20px;
+    z-index: 100;
+    margin: 0 auto;
+    width: 900px;
+    margin-left: 50px;
+    opacity: 0.7;
+    padding: 0px 50px;
+    margin-top: 200px;
+}
+
+.startScreen{
+
+z-index: 1;
+position: relative;
+margin-left: 100px;
+
+
+    
+}
+
+
+.history{
+    font-family: insertCoin;
+    font-size: 10px;
+    color: #fff;
+    margin-top: 50px;
+    line-height: 20px;  
+}
+
+.title {
+    left: 400px;
+    top: 5px;
+    position: absolute;
+    z-index: 2;
+}
+
+
+.title img {
+
+    animation: mongo_title 5s ease-in-out;
+    /*animation: move-title 3s linear;*/
+    text-align: right;
+    height: 200px;
+}
+
+.mongo{
+    left: -10px;
+    top: -75px;
+    position: absolute;
+    z-index: 2;
+}
+
+
+.mongo img {
+
+    animation: fadeIn 2s;
+    /*animation: move-title 3s linear;*/
+    text-align: right;
+    width: 325px;
+}
+
+#gameOverScreen,#winScreen {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+    border-radius: 20px;
+    background-image: url(../img/background_container.jpeg);
+        border-radius: 20px;
+    
+
+}
+
+.gameOverScreen_message{
+    background-color: black;
+        width: 900px;
+        height: 450px;
+        left: 95px;
+        top: 130px;
+        opacity: 0.7;
+        display: block;
+        position: absolute;
+        border-radius: 20px;
+        padding: 0 50px;
+}
+
+.gameOverTitle {
+    
+    text-align: center;
+    margin-top: 50px;
+    color: #fff;
+    color: chocolate;
+    font-size: 30px;
+
+}
+
+#restartButton, #restartwinButton {
+    
+    
+    display: block;
+    padding: 10px;
+    font-size: 20px;
+    font-family: insertCoin;
+    opacity: 1;
+    background-color: burlywood;
+    animation: zoom-in-zoom-out 1s ease-out infinite;
+    margin: 30px auto;
+    
+}
+#gameOverText{
+        font-family: insertCoin;
+        background-size: cover;
+        font-size: 10px;
+        color: #fff;
+        margin-top: 50px;
+        line-height: 20px;
+        padding: 50px;
+}
+
+/* #winScreen{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+    background-size: cover;
+    border-radius: 20px;
+    
+
+}
+
+.winScreenTitle {
+    position: absolute;
+    margin-left: 490px;
+    margin-top: 50px;
+    color: #fff;
+
+}
+
+#restartButton {
+    position: absolute;
+    margin: 30px auto;
+    display: block;
+    padding: 10px;
+    font-size: 20px;
+    font-family: insertCoin;
+    opacity: 1;
+    background-color: burlywood;
+    animation: zoom-in-zoom-out 1s ease-out infinite;
+    margin-top: 500px;
+    margin-left: 450px;
+}
+
+#winScreenText{
+        font-family: insertCoin;
+        font-size: 10px;
+        color: #fff;
+        margin-top: 50px;
+        line-height: 20px;
+        padding: 50px;
+}
+ */
+.game-style{
+    background-color: rgb(6, 120, 120);
+}
+
+.score{
+   display:none;
+   margin: 50px 0 50px 0;
+   text-align: center;
+   position: relative;
+    border-radius: 20px;
+
+}
+
+#score{
+    list-style: none;
+    font-size: 25px;
+    margin: 10px;
+    color: #FFF;
+}
+
+#lifes{
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.score_panel{
+    background-color: burlywood;
+    border: 1px solid chocolate;
+    position: absolute;
+        left: 21px;
+        top: 100px;
+        padding: 15px;
+        border-radius: 20px;
+        width: 175px;
+}
+
+.score_points, .lifes_title{
+   
+        color:chocolate;
+        font-size: 20px;
+}
+
+
+
+.score_title img{
+    width: 250px;
+}
+
+#score li {
+    list-style: none;
+    display: inline;
+    font-size: 25px;
+    color: #FFF;
+
+}
+
+.keys{
+    top: 585px;
+        position: absolute;
+        left: 25px;
+}
+
+.keys img{
+    width: 200px;
+}
+
+#startButton{
+    margin:30px auto;
+    display: block;
+    padding: 10px;
+    font-size: 20px;
+    font-family: insertCoin;
+    opacity: 1;
+    background-color: burlywood;
+    animation: zoom-in-zoom-out 1s ease-out infinite;
+}
+
+#jsPrice{
+
+    display: none;
+    background-color: black;
+    height: 75%;
+    margin-top: 100px;
+    width: 60%;
+    margin: 100px auto;
+    color:white;
+    position: absolute;
+    z-index:10;
+    
+}
+
+
+
+
+ul#lifes li{
+    list-style: none;
+    display: inline;
+
+}
+
+#score li {
+    list-style: none;
+    display: inline;
+
+}
